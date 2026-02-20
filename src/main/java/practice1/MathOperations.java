@@ -1,3 +1,5 @@
+package practice1;
+
 public class MathOperations {
     public static void main(String[] args) {
         int sum1 = sum(10, 12);
