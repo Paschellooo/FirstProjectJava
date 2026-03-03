@@ -15,3 +15,4 @@ public class SecondMain {
         System.out.println("Новая площадь: " + rectangle.calculateArea());
     }
 }
+

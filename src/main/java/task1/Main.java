@@ -9,3 +9,13 @@ public class Main {
     }
 
 }
+
+
+//public class Main {
+//    public static void main (String[] args){
+//        Car mazda = new Car(1920 , "mazda");
+//        mazda.print();
+//        mazda.setYear(1923);
+//        mazda.print();
+//    }
+//}

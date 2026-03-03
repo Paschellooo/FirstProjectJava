@@ -1,23 +1,23 @@
 package task3;
 
 public class Book {
-    String title;
-    String author;
+    private String title;
+   private String author;
     Book (String anyTitle , String anyAuthor){
         title = anyTitle;
         author = anyAuthor;
     }
-    String anyTitle(){
+    public String getTitle(){
         return title;
     }
-    String anyAuthor(){
+    public String getAuthor(){
         return author;
     }
-    void anyTitle (String newTitle){
-        title = newTitle;
+   public void setTitle (String title){
+        this.title = title;
     }
-    void setAuthor (String newAuthor){
-        author = newAuthor;
+    public void setAuthor (String author){
+        this.author = author;
     }
     void printInfo(){System.out.println("Автор " + author +   " , Название книги - " + title);
     }

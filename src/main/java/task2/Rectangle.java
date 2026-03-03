@@ -25,3 +25,5 @@ public class Rectangle {
         return width * height;  // использует поля объекта
     }
 }
+
+
