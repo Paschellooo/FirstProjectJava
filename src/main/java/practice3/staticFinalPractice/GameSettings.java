@@ -1,37 +1,38 @@
 package practice3.staticFinalPractice;
 
-public class GameSettings {
-    static int maxPlayers;
-    final String gameName = "Dota2";
-    int currentPlayers;
-
-    GameSettings(int someCurrentPlayers) {
-        this.currentPlayers = someCurrentPlayers;
-    }
-
-    public static void setMaxPlayers(int newMaxPlayers) {
-        maxPlayers = newMaxPlayers;
-    }
-
-    void addPlayer() {
-        currentPlayers += 1;
-    }
-
-    void printGameStatus() {
-        System.out.println("Название " + gameName);
+public class GameSettings{
+    public static int maxPlayers = 10;
+    final String gameName;
+    int currentPlayers = 0;
+    GameSettings (String gameName){
+        this.gameName = gameName;}
+     public static void setMaxPlayers(int newMaxPlayers){
+            maxPlayers = newMaxPlayers;
+        }
+     void addPlayers(){
+        currentPlayers ++;
+     }
+     public void printGameStatus(){
+        System.out.println("название " + gameName);
         System.out.println("текущее кол-во игроков " + currentPlayers);
-        System.out.println("максимальное кол-во игроков " + maxPlayers);
-    }
+        System.out.println("макс кол-во игроков " + maxPlayers);
+     }
+     public static void main (String[] args){
+        GameSettings game1 = new GameSettings("шашки");
+        GameSettings game2 = new GameSettings("chess");
+         System.out.println("=== Начальный статус игр ===");
+        game2.printGameStatus();
+        game1.printGameStatus();
 
-    public static void main(String[] args) {
-        GameSettings.setMaxPlayers(100);
-        GameSettings cs2 = new GameSettings(10);
-        GameSettings cs1 = new GameSettings(12);
-        cs1.addPlayer();
-        cs2.addPlayer();
-        cs2.addPlayer();
-        System.out.println("Статус игр после изменений:");
-        cs2.printGameStatus();
-        cs1.printGameStatus();
+         System.out.println("=== Меняем максимальное количество игроков на 20 ===");
+    GameSettings.setMaxPlayers(20);
+
+         System.out.println("=== Добавляем по одному игроку в каждую игру ===");
+    game1.addPlayers();
+    game2.addPlayers();
+
+         System.out.println("=== Финальный статус игр ===");
+   game1.printGameStatus();
+   game2.printGameStatus();
+     }
     }
-}

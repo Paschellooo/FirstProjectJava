@@ -1,34 +1,39 @@
 package practice3.staticFinalPractice;
 
-public class Library {
+public class Library{
     private String bookTitle;
     protected String author;
     int year;
     public String category;
-    public Library (String bookTitle, String author, int year, String category){};
 
-    private String getBookTitle() {
+    public String getBookTitle() {
         return bookTitle;
     }
-        protected String getAuthor(){
-            return author;
-        }
-        int getYear(){
-        return year;
-        }
-        public String getCategory(){
-        return category;
-        }
-        private void setBookTitle(String newBookTitle){
-        this.bookTitle = newBookTitle;
-        }
-        protected void author(String newAuthor){
-        this.author = newAuthor;
-        }
-        void setYear(int newYear){
-        this.year = newYear;
+     public void setBookTitle(String bookTitle){
+        this.bookTitle = bookTitle;
     }
-    public void setCategory(String newCategory){
-        this.category = newCategory;
+    protected String getAuthor(){
+        return author;
+    }
+    protected void setAuthor(String author){
+        this.author = author;
+    }
+     int getYear(){
+        return year;
+    }
+     void setYear(int year){
+        this.year = year;
+    }
+     public String getCategory(){
+        return category;
+    }
+    public void setCategory(String category){
+        this.category = category;
+    }
+    Library (String bookTitle , String author , int year , String category){
+        this.bookTitle = bookTitle;
+        this.author = author;
+        this.year = year;
+        this.category = category;
     }
 }
